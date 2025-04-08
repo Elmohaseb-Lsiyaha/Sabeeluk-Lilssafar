@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طرق الدفع - سَبِيلُكَ لِلسَّفَر</title>
+    <meta name="description" content="طرق الدفع الآمنة لوكالة سَبِيلُكَ لِلسَّفَر - دفع إلكتروني، تحويل نقدي، دفع نقدي">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="طرق الدفع - سَبِيلُكَ لِلسَّفَر">
+    <meta property="og:description" content="دفع آمن لخدمات الحج والعمرة وتأشيرات السعودية">
+    <meta property="og:url" content="https://elmohaseb-lsiyaha.netlify.app/payment.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://elmohaseb-lsiyaha.netlify.app/images/logo.gif">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://elmohaseb-lsiyaha.netlify.app/payment.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <style>
+        :root {
+            --primary-color: #006494;
+            --primary-light: #0582CA;
+            --secondary-color: #FFFFFF;
+            --accent-color: #FF9100;
+            --text-dark: #121212;
+            --text-medium: #333333;
+            --text-light: #FFFFFF;
+            --whatsapp-color: #25D366;
+            --whatsapp-dark: #128C7E;
+            --white: #FFFFFF;
+            --black: #000000;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --error-color: #d32f2f;
+            --success-color: #388e3c;
+            --paymob-color: #6b5bff;
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--secondary-color);
+            font-weight: 700;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 900;
+            line-height: 1.3;
+            color: var(--text-dark);
+        }
+
+        p, li, a, span {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        a {
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--text-light);
+            padding: 1.5rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            z-index: 100;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            object-fit: contain;
+            background-color: white;
+            padding: 5px;
+        }
+
+        .company-name {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: var(--white);
+            letter-spacing: -0.5px;
+        }
+
+        .company-name-en {
+            font-size: 1.4rem;
+            font-weight: 800;
+            display: block;
+            color: var(--white);
+            opacity: 0.95;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            transition: var(--transition);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        nav ul li a:hover, nav ul li a:focus {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+
+        nav ul li a.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 100, 148, 0.85), rgba(5, 130, 202, 0.85)), url('images/payment-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            text-align: center;
+            padding: 3rem 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 3px solid var(--accent-color);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: var(--white);
+            font-weight: 900;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 700;
+            line-height: 1.8;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+            font-weight: 900;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 5px;
+            background-color: var(--accent-color);
+        }
+
+        /* Payment Specific Styles */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .payment-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            box-shadow: var(--shadow-sm);
+            border-top: 5px solid var(--primary-color);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .payment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: var(--accent-color);
+        }
+
+        .payment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .payment-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .payment-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            font-weight: 900;
+        }
+
+        .payment-card p {
+            margin-bottom: 1.5rem;
+            color: var(--text-medium);
+        }
+
+        .payment-steps {
+            background: rgba(0, 100, 148, 0.05);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin: 3rem 0;
+            border: 2px solid var(--primary-light);
+        }
+
+        .payment-steps h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .steps-list {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .steps-list li {
+            padding: 1rem 0 1rem 3rem;
+            position: relative;
+            margin-bottom: 1rem;
+            border-bottom: 2px dashed #e0e0e0;
+            text-align: right;
+        }
+
+        .steps-list li:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2rem;
+            height: 2rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .qr-code {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .qr-code img {
+            max-width: 200px;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            background: white;
+            margin: 0 auto;
+        }
+
+        /* Paymob Integration */
+        .paymob-integration {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            margin: 2rem auto;
+            max-width: 600px;
+            border: 2px solid var(--primary-light);
+            display: none;
+        }
+
+        .paymob-btn {
+            background: linear-gradient(to bottom, var(--paymob-color), #4b3dff);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(107, 91, 255, 0.3);
+        }
+
+        .paymob-btn:hover {
+            background: var(--paymob-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(107, 91, 255, 0.4);
+        }
+
+        /* Buttons */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, var(--whatsapp-color), var(--whatsapp-dark));
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-decoration: none;
+            margin: 1.5rem auto 0;
+            box-shadow: 0 4px 15px rgba(18, 140, 126, 0.4);
+            transition: var(--transition);
+            border: 2px solid transparent;
+            min-width: 200px;
+        }
+
+        .whatsapp-btn:hover, .whatsapp-btn:focus {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(7, 94, 84, 0.5);
+            border-color: var(--white);
+        }
+
+        .whatsapp-btn i {
+            margin-left: 0.8rem;
+            font-size: 1.6rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 3rem 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .faq-question {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            margin-top: 1rem;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Testimonials Section Styles */
+        .testimonials {
+            background: rgba(0, 100, 148, 0.05);
+            padding: 3rem 1rem;
+            margin: 3rem 0;
+            border-radius: var(--border-radius);
+        }
+
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border-top: 5px solid var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-content {
+            position: relative;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-size: 3rem;
+            color: rgba(0, 100, 148, 0.1);
+            z-index: 1;
+        }
+
+        .testimonial-content p {
+            position: relative;
+            z-index: 2;
+            font-style: italic;
+            color: var(--text-medium);
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+        }
+
+        .testimonial-author h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-author span {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--text-light);
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: right;
+        }
+
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            color: var(--accent-color);
+            position: relative;
+            display: inline-block;
+            font-weight: 900;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0.8rem;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .footer-section a:hover, .footer-section a:focus {
+            color: var(--accent-color);
+            padding-right: 5px;
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: flex-end;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+            border: 1px solid transparent;
+            font-size: 1.2rem;
+        }
+
+        .social-icons a:hover, .social-icons a:focus {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+            border-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 700;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-list li {
+                padding: 1rem 0 1rem 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.7rem;
+            }
+
+            .testimonials-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="promo-banner">
+        <p>🔥 عروض خاصة للحج والعمرة هذا الموسم - خصم يصل إلى 20% 🔥 <a href="contact.html" class="promo-link">احجز الآن</a></p>
+        <button class="close-promo" aria-label="إغلاق شريط العروض">×</button>
+    </div>
+    
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo.gif" alt="شعار سَبِيلُكَ لِلسَّفَر" class="logo-img" onerror="this.src='https://via.placeholder.com/80x80?text=شعار+الشركة';this.onerror=null;">
+                <div>
+                    <h1 class="company-name">سَبِيلُكَ لِلسَّفَر</h1>
+                    <span class="company-name-en">SABEELUK LILSSAFAR</span>
+                </div>
+            </div>
+            <nav aria-label="القائمة الرئيسية">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="index.html#about">من نحن</a></li>
+                    <li><a href="payment.html" class="active">طرق الدفع</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main-content">
+        <section class="hero" aria-labelledby="payment-hero-heading">
+            <div class="hero-content">
+                <h2 id="payment-hero-heading">طرق الدفع الآمنة</h2>
+                <p>نوفر لك طرق دفع متعددة وآمنة لراحتك وضمان سلامة معاملاتك المالية</p>
+            </div>
+        </section>
+        
+        <section aria-labelledby="payment-methods-heading">
+            <h2 id="payment-methods-heading" class="section-title">طرق الدفع المتاحة</h2>
+            
+            <div class="payment-methods">
+                <div class="payment-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>الدفع الإلكتروني</h3>
+                    <p>دفع آمن عبر البطاقات الائتمانية أو المحافظ الإلكترونية باستخدام بوابة Paymob الآمنة</p>
+                    <button id="payWithPaymob" class="paymob-btn">
+                        <i class="fas fa-lock"></i> الدفع الآن عبر Paymob
+                    </button>
+                </div>
+                
+                <div class="payment-card">
+                    <i class="fas fa-money-bill-transfer"></i>
+                    <h3>الدفع عبر التحويل النقدي</h3>
+                    <p>تواصل معنا عبر الواتساب للحصول على بيانات الحساب البنكي وإرسال إيصال التحويل</p>
+                    <a href="https://wa.me/message/FIW5CFX2HH2HF1" class="whatsapp-btn" target="_blank" aria-label="تواصل معنا عبر واتساب للدفع النقدي">
+                        <i class="fab fa-whatsapp"></i> التواصل للتحويل النقدي
+                    </a>
+                </div>
+                
+                <div class="payment-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>الدفع نقداً</h3>
+                    <p>يمكنك الدفع نقداً في أي من فروعنا مع استلام الفاتورة الرسمية</p>
+                    <a href="contact.html#branches" class="whatsapp-btn" style="padding: 0.8rem 1.5rem; font-size: 0.9rem;">
+                        <i class="fas fa-map-marker-alt"></i> مواقع الفروع
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Paymob Integration Section -->
+        <section id="paymob-integration" class="paymob-integration" aria-labelledby="paymob-heading">
+            <h3 id="paymob-heading">الدفع عبر Paymob</h3>
+            <div id="paymob-iframe-container">
+                <!-- سيتم تحميل iframe الدفع هنا -->
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-credit-card" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--primary-color);">بوابة الدفع Paymob</h3>
+                    <p>سيتم تحويلك إلى بوابة الدفع الآمنة لإتمام عملية الدفع</p>
+                    <p style="margin-top: 1rem;"><small>سياسة الدفع والاسترجاع: جميع المبالغ المدفوعة غير قابلة للاسترجاع إلا في حال إلغاء الخدمة من قبلنا</small></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Paymob Instructions -->
+        <section id="paymob-instructions" class="payment-steps" aria-labelledby="paymob-instructions-heading">
+            <h3 id="paymob-instructions-heading">طريقة الدفع عبر Paymob</h3>
+            
+            <ol class="steps-list">
+                <li>اضغط على زر "الدفع الآن عبر Paymob"</li>
+                <li>اختر طريقة الدفع المفضلة (بطاقة ائتمانية/محفظة إلكترونية)</li>
+                <li>أدخل بيانات الدفع الخاصة بك</li>
+                <li>اضغط على تأكيد لإتمام عملية الدفع</li>
+                <li>ستصلك رسالة تأكيد بالدفع على بريدك الإلكتروني</li>
+                <li>سيتم تفعيل خدمتك خلال 24 ساعة عمل</li>
+            </ol>
+            
+            <div class="qr-code">
+                <p>للدفع عبر محفظتك الإلكترونية:</p>
+                <img src="images/paymob-qr.png" alt="كود Paymob للدفع" onerror="this.src='https://via.placeholder.com/200x200?text=QR+Code';this.onerror=null;">
+                <p>بعد الدفع، يرجى إرسال إيصال الدفع إلى واتساب الشركة</p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading" class="section-title">آراء عملائنا</h2>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <p>تجربة رائعة مع وكالة سَبِيلُكَ لِلسَّفَر، ساعدوني في إتمام إجراءات العمرة بكل سهولة ويسر.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client1.jpg" alt="صورة العميل أحمد محمد" onerror="this.src='https://via.placeholder.com/80x80?text=صورة+العميل';this.onerror=null;">
+                        <div>
+                            <h4>أحمد محمد</h4>
+                            <span>رحلة العمرة 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <p>خدمة ممتازة وأسعار تنافسية، أوصي الجميع بالتعامل مع هذه الوكالة الموثوقة.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client2.jpg" alt="صورة العميلة سارة محمود" onerror="this.src='https://via.placeholder.com/80x80?text=صورة+العميل';this.onerror=null;">
+                        <div>
+                            <h4>سارة محمود</h4>
+                            <span>تأشيرة سياحية للسعودية</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-right quote-icon"></i>
+                        <p>فريق محترف ومتابعة دقيقة لكل التفاصيل، شكراً لكم على رحلة الحج الميسرة.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/client3.jpg" alt="صورة العميل خالد عبدالله" onerror="this.src='https://via.placeholder.com/80x80?text=صورة+العميل';this.onerror=null;">
+                        <div>
+                            <h4>خالد عبدالله</h4>
+                            <span>رحلة الحج 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="contact.html" class="whatsapp-btn">
+                    <i class="fas fa-pen-alt"></i> اترك رأيك عن خدماتنا
+                </a>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="faq-section" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" class="section-title">أسئلة شائعة حول الدفع</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل الدفع عبر Paymob آمن؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نعم، جميع عمليات الدفع تتم عبر قنوات مشفرة وآمنة ولا يتم تخزين أي بيانات دفع على خوادمنا. نستخدم بوابة Paymob المعتمدة عالمياً والتي تتوافق مع أعلى معايير الأمان.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>ما هي وسائل الدفع المقبولة عبر Paymob؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نقبل جميع البطاقات الائتمانية والخصم (Visa/MasterCard) وكذلك محافظ فودافون كاش وأورانج كاش.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>كم تستغرق عملية التحقق من الدفع؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>عادةً ما يتم التحقق من الدفع خلال ساعة عمل واحدة، ولكن قد يستغرق الأمر حتى 24 ساعة في بعض الأحيان.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>هل يمكنني الحصول على فاتورة رسمية؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>نعم، سنزودك بفاتورة رسمية بعد استلام الدفع مباشرةً عبر البريد الإلكتروني أو واتساب.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>أين يمكنني معرفة المزيد عن خدماتكم؟</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>يمكنك زيارة <a href="index.html#services" style="color: var(--primary-color);">صفحتنا الرئيسية</a> للتعرف على جميع خدماتنا، أو التواصل معنا عبر <a href="contact.html" style="color: var(--primary-color);">صفحة الاتصال</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer aria-label="تذييل الصفحة">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>سَبِيلُكَ لِلسَّفَر</h3>
+                <p>شركة متخصصة في خدمات الحج والعمرة وتأشيرات السعودية بأسعار مميزة وجودة عالية.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/vc.tasheer.eg" target="_blank" aria-label="صفحتنا على فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/sabeeluk" target="_blank" aria-label="صفحتنا على تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/sabeeluk" target="_blank" aria-label="صفحتنا على إنستجرام"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <a href="index.html" aria-label="الانتقال إلى الصفحة الرئيسية">الرئيسية</a>
+                <a href="services.html" aria-label="الانتقال إلى قسم الخدمات">خدماتنا</a>
+                <a href="index.html#about" aria-label="الانتقال إلى قسم من نحن">من نحن</a>
+                <a href="payment.html" aria-label="الانتقال إلى قسم طرق الدفع">طرق الدفع</a>
+                <a href="contact.html" aria-label="الانتقال إلى قسم اتصل بنا">اتصل بنا</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <a href="tel:+201099667530" aria-label="اتصل بنا على الرقم +201099667530">+201099667530</a>
+                <a href="mailto:sabeeluk.lilssafar@gmail.com" aria-label="أرسل بريد إلكتروني إلى sabeeluk.lilssafar@gmail.com">sabeeluk.lilssafar@gmail.com</a>
+                <p>فروعنا: القاهرة - الدقهلية</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة &copy; <span id="year"></span> سَبِيلُكَ لِلسَّفَر</p>
+        </div>
+    </footer>
+    
+    <button class="back-to-top" id="backToTop" aria-label="العودة إلى أعلى الصفحة">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/message/FIW5CFX2HH2HF1" target="_blank" aria-label="تواصل معنا عبر واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // تكامل Paymob
+        document.getElementById('payWithPaymob').addEventListener('click', function() {
+            // هنا يتم استدعاء API Paymob
+            // هذا مثال توضيحي، يجب استبداله بالكود الفعلي من وثائق Paymob
+            
+            // عرض قسم الدفع
+            document.getElementById('paymob-integration').style.display = 'block';
+            
+            // التمرير إلى قسم الدفع
+            document.getElementById('paymob-integration').scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            // في الواقع، هنا يتم إنشاء iframe Paymob
+            // مثال:
+            /*
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://accept.paymob.com/api/acceptance/iframes/...';
+            iframe.style.width = '100%';
+            iframe.style.border = 'none';
+            document.getElementById('paymob-iframe-container').appendChild(iframe);
+            */
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Update copyright year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Progress Bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Close promo banner
+        document.querySelector('.close-promo').addEventListener('click', function() {
+            document.querySelector('.promo-banner').style.display = 'none';
+            localStorage.setItem('promoClosed', 'true');
+        });
+        
+        // Check if promo was closed
+        if (localStorage.getItem('promoClosed')) {
+            document.querySelector('.promo-banner').style.display = 'none';
+        }
+        
+        // Load non-critical resources
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lazy load images
+            const lazyImages = [].slice.call(document.querySelectorAll("img[data-src]"));
+            
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

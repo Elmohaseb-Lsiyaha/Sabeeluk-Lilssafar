@@ -1,0 +1,199 @@
+/* ملف styles.css - أنماط موقع سَبِيلُكَ لِلسَّفَر */
+/* إصدار 1.0 - نوفمبر 2023 */
+
+:root {
+  /* الألوان الأساسية */
+  --primary-color: #006494; /* أزرق داكن */
+  --primary-light: #0582CA; /* أزرق فاتح */
+  --secondary-color: #FFFFFF; /* أبيض */
+  --accent-color: #FF9100; /* برتقالي */
+  --text-dark: #121212; /* أسود داكن للنصوص */
+  --text-medium: #333333; /* رمادي داكن */
+  --text-light: #FFFFFF; /* أبيض للنصوص */
+  --whatsapp-color: #25D366; /* لون واتساب */
+  --whatsapp-dark: #128C7E; /* لون واتساب داكن */
+  --white: #FFFFFF;
+  --black: #000000;
+  
+  /* الظلال */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
+  
+  /* الزوايا والانتقالات */
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* إعادة الضبط الأساسية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.8;
+  background-color: var(--secondary-color);
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* الهيدر */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: var(--text-light);
+  padding: 1.5rem 0;
+  box-shadow: var(--shadow-md);
+  border-bottom: 4px solid var(--accent-color);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-color);
+  object-fit: contain;
+  background-color: white;
+  padding: 5px;
+}
+
+.company-name {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* التنقل */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav ul li a {
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: var(--transition);
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+nav ul li a.active {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+/* المحتوى الرئيسي */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* أقسام الخدمات */
+.service-box {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-sm);
+  border-top: 5px solid var(--primary-color);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* أزرار الواتساب */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--whatsapp-color), var(--whatsapp-dark));
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-decoration: none;
+  margin: 1.5rem auto 0;
+  box-shadow: 0 4px 15px rgba(18, 140, 126, 0.4);
+  transition: var(--transition);
+}
+
+.whatsapp-btn:hover {
+  background: var(--whatsapp-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(7, 94, 84, 0.5);
+}
+
+/* الفوتر */
+footer {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: var(--text-light);
+  padding: 2.5rem;
+  margin-top: 3rem;
+  border-top: 4px solid var(--accent-color);
+}
+
+/* التكيف مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-box {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
