@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - سَبِيلُكَ لِلسَّفَر | وكالة الحج والعمرة وتأشيرات السعودية</title>
+    <meta name="description" content="تواصل مع فريق سَبِيلُكَ لِلسَّفَر للحصول على استشارات مجانية وخدمات السفر المتميزة. نحن متاحون 24/7 لمساعدتك.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="اتصل بنا - سَبِيلُكَ لِلسَّفَر">
+    <meta property="og:description" content="تواصل مع فريق سَبِيلُكَ لِلسَّفَر للحصول على استشارات مجانية وخدمات السفر المتميزة">
+    <meta property="og:url" content="https://elmohaseb-lsiyaha.netlify.app/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://elmohaseb-lsiyaha.netlify.app/images/logo.gif">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://elmohaseb-lsiyaha.netlify.app/contact.html">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/gif" href="images/logo.gif">
+    
+    <!-- Inline Critical CSS -->
+    <style>
+        :root {
+            --primary-color: #006494;
+            --primary-light: #0582CA;
+            --secondary-color: #FFFFFF;
+            --accent-color: #FF9100;
+            --text-dark: #121212;
+            --text-medium: #333333;
+            --text-light: #FFFFFF;
+            --whatsapp-color: #128C7E;
+            --whatsapp-dark: #075E54;
+            --white: #FFFFFF;
+            --black: #000000;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+            --error-color: #d32f2f;
+            --success-color: #388e3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.8;
+            background-color: var(--secondary-color);
+            font-weight: 700;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 900;
+            line-height: 1.3;
+            color: var(--text-dark);
+        }
+        
+        p, li, a, span {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        
+        a {
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background: #f1f1f1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background: var(--accent-color);
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* Promo Banner */
+        .promo-banner {
+            background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+            color: white;
+            padding: 0.8rem;
+            text-align: center;
+            position: relative;
+            font-weight: 800;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .promo-link {
+            color: var(--accent-color);
+            text-decoration: underline;
+            margin-right: 0.5rem;
+            font-weight: 900;
+        }
+        
+        .close-promo {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--text-light);
+            padding: 1.5rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            z-index: 100;
+            border-bottom: 4px solid var(--accent-color);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            object-fit: contain;
+            background-color: white;
+            padding: 5px;
+        }
+        
+        .company-name {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: var(--white);
+            letter-spacing: -0.5px;
+        }
+        
+        .company-name-en {
+            font-size: 1.4rem;
+            font-weight: 800;
+            display: block;
+            color: var(--white);
+            opacity: 0.95;
+            text-transform: uppercase;
+        }
+        
+        /* Navigation */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            transition: var(--transition);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        nav ul li a:hover, nav ul li a:focus {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            background-color: rgba(255, 255, 255, 0.25);
+        }
+        
+        nav ul li a.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 100, 148, 0.85), rgba(5, 130, 202, 0.85)), url('images/kaaba-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            text-align: center;
+            padding: 3rem 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 3px solid var(--accent-color);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            color: var(--white);
+            font-weight: 900;
+            line-height: 1.3;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 700;
+            line-height: 1.8;
+        }
+        
+        /* Contact Section */
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+            font-weight: 900;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 5px;
+            background-color: var(--accent-color);
+        }
+        
+        .contact-section {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            border: 2px solid var(--primary-color);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        .contact-form {
+            background: rgba(5, 130, 202, 0.05);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--primary-light);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: right;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 800;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: 'Tajawal', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 100, 148, 0.2);
+        }
+        
+        .error-message {
+            background-color: #ffebee;
+            color: var(--error-color);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            border: 1px solid #ef9a9a;
+            font-weight: 700;
+            display: none;
+        }
+
+        .success-message {
+            background-color: #e8f5e9;
+            color: var(--success-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            border: 1px solid #a5d6a7;
+            font-weight: 700;
+            display: none;
+            text-align: center;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(to bottom, var(--primary-color), var(--primary-light));
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 100, 148, 0.3);
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-card {
+            background: rgba(5, 130, 202, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            width: 100%;
+            transition: var(--transition);
+            border: 2px solid var(--primary-light);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            background: rgba(5, 130, 202, 0.2);
+        }
+        
+        .contact-card i {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 900;
+        }
+        
+        .contact-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 900;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, var(--whatsapp-color), var(--whatsapp-dark));
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-decoration: none;
+            margin: 1.5rem auto 0;
+            box-shadow: 0 4px 15px rgba(18, 140, 126, 0.4);
+            transition: var(--transition);
+            border: 2px solid transparent;
+            min-width: 200px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            letter-spacing: 0.5px;
+        }
+        
+        .whatsapp-btn:hover, .whatsapp-btn:focus {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(7, 94, 84, 0.5);
+            border-color: var(--white);
+        }
+        
+        .whatsapp-btn i {
+            margin-left: 0.8rem;
+            color: var(--white);
+            font-size: 1.6rem;
+            font-weight: 900;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--whatsapp-color), var(--whatsapp-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(18, 140, 126, 0.4);
+            z-index: 99;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--text-light);
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            border-top: 4px solid var(--accent-color);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: right;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            color: var(--accent-color);
+            position: relative;
+            display: inline-block;
+            font-weight: 900;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .footer-section p, .footer-section a {
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0.8rem;
+            display: block;
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .footer-section a:hover, .footer-section a:focus {
+            color: var(--accent-color);
+            padding-right: 5px;
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            justify-content: flex-end;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+            border: 1px solid transparent;
+            font-size: 1.2rem;
+        }
+        
+        .social-icons a:hover, .social-icons a:focus {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+            border-color: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 700;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 99;
+            box-shadow: var(--shadow-md);
+            border: none;
+            transition: var(--transition);
+            border: 3px solid var(--primary-color);
+            font-weight: 900;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover, .back-to-top:focus {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        /* Thank You Modal */
+        .thank-you-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .thank-you-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .thank-you-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            border-top: 5px solid var(--accent-color);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .thank-you-modal.active .thank-you-container {
+            transform: translateY(0);
+        }
+        
+        .thank-you-icon {
+            font-size: 5rem;
+            color: var(--success-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .thank-you-title {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .thank-you-message {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .footer-section h3::after {
+                right: 50%;
+                transform: translateX(50%);
+            }
+            
+            .back-to-top {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+    
+    <!-- Load non-critical CSS asynchronously -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800;900&display=swap"></noscript>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div class="promo-banner">
+        <p>🔥 عروض خاصة للحج والعمرة هذا الموسم - خصم يصل إلى 20% 🔥 <a href="services.html" class="promo-link">احجز الآن</a></p>
+        <button class="close-promo" aria-label="إغلاق شريط العروض">×</button>
+    </div>
+    
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+    
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img data-src="images/logo.gif" alt="شعار سَبِيلُكَ لِلسَّفَر" class="logo-img" onerror="this.src='https://via.placeholder.com/80x80?text=شعار+الشركة';this.onerror=null;">
+                <div>
+                    <h1 class="company-name">سَبِيلُكَ لِلسَّفَر</h1>
+                    <span class="company-name-en">SABEELUK LILSSAFAR</span>
+                </div>
+            </div>
+            <nav aria-label="القائمة الرئيسية">
+                <ul>
+                    <li><a href="index.html" aria-label="الانتقال إلى الصفحة الرئيسية">الرئيسية</a></li>
+                    <li><a href="services.html" aria-label="الانتقال إلى صفحة الخدمات">الخدمات</a></li>
+                    <li><a href="payment.html" aria-label="الانتقال إلى صفحة طرق الدفع">طرق الدفع</a></li>
+                    <li><a href="index.html#testimonials" aria-label="الانتقال إلى قسم آراء العملاء">آراء العملاء</a></li>
+                    <li><a href="contact.html" class="active" aria-label="الانتقال إلى صفحة اتصل بنا">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main-content">
+        <section class="hero" aria-labelledby="contact-hero-heading">
+            <div class="hero-content">
+                <h2 id="contact-hero-heading">تواصل معنا</h2>
+                <p>فريق خدمة العملاء متاح 24/7 لمساعدتك في كل استفساراتك واحتياجاتك المتعلقة بالسفر</p>
+                <a href="https://wa.me/message/FIW5CFX2HH2HF1" class="whatsapp-btn" target="_blank" aria-label="تواصل معنا عبر واتساب">
+                    <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                </a>
+            </div>
+        </section>
+        
+        <section class="contact-section" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" class="section-title">تواصل معنا</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">نحن هنا لمساعدتك في كل استفساراتك واحتياجاتك المتعلقة بالسفر والسياحة</p>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formsubmit.co/sabeeluk.lilssafar@gmail.com" method="POST">
+                        <!-- إعدادات FormSubmit -->
+                        <input type="hidden" name="_next" value="https://elmohaseb-lsiyaha.netlify.app/thank-you.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_subject" value="طلب جديد من موقع سَبِيلُكَ لِلسَّفَر">
+                        <input type="text" name="_honey" style="display:none">
+                        
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">الخدمة المطلوبة</label>
+                            <select id="service" name="service" required>
+                                <option value="" selected disabled>اختر الخدمة</option>
+                                <option value="hajj">برامج الحج</option>
+                                <option value="umrah">برامج العمرة</option>
+                                <option value="saudi-visa">تأشيرات السعودية</option>
+                                <option value="flights">حجز الطيران</option>
+                                <option value="hotels">حجز الفنادق</option>
+                                <option value="other">خدمة أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                        <div id="formError" class="error-message"></div>
+                        <div id="formSuccess" class="success-message" style="display: none;"></div>
+                    </form>
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-card" aria-label="معلومات الاتصال الهاتفي">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <h3>اتصل بنا</h3>
+                        <p><a href="tel:+201099667530" aria-label="اتصل بنا على الرقم +201099667530">+201099667530</a></p>
+                    </div>
+                    
+                    <div class="contact-card" aria-label="معلومات البريد الإلكتروني">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <h3>البريد الإلكتروني</h3>
+                        <p><a href="mailto:sabeeluk.lilssafar@gmail.com" aria-label="أرسل بريد إلكتروني إلى sabeeluk.lilssafar@gmail.com">sabeeluk.lilssafar@gmail.com</a></p>
+                    </div>
+                    
+                    <div class="contact-card" aria-label="معلومات العنوان">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <h3>فروعنا</h3>
+                        <p>(محافظة الدقهلية)</p>
+                        <p>(محافظة القاهرة)</p>
+                    </div>
+                    
+                    <div class="contact-card" aria-label="ساعات العمل">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                        <h3>ساعات العمل</h3>
+                        <p>خدمة عملاء متاحة 24 ساعة</p>
+                        <p>طوال أيام الأسبوع</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="services.html" class="whatsapp-btn" style="background: var(--primary-color);">
+                    <i class="fas fa-list-alt"></i> عرض جميع الخدمات
+                </a>
+                <a href="payment.html" class="whatsapp-btn" style="background: var(--primary-light);">
+                    <i class="fas fa-credit-card"></i> طرق الدفع المتاحة
+                </a>
+                <a href="index.html#testimonials" class="whatsapp-btn" style="background: var(--accent-color);">
+                    <i class="fas fa-star"></i> آراء العملاء
+                </a>
+            </div>
+        </section>
+        
+        <!-- خريطة الموقع -->
+        <section style="margin-top: 3rem;">
+            <h2 class="section-title">موقعنا على الخريطة</h2>
+            <div style="width: 100%; height: 400px; background: #f5f5f5; border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; margin-top: 1.5rem;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.769920282576!2d31.240215515115!3d30.072072581872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDA0JzE5LjUiTiAzMcKwMTQnMjkuOSJF!5e0!3m2!1sen!2seg!4v1620000000000!5m2!1sen!2seg" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; border-radius: var(--border-radius);" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    aria-label="خريطة توضح موقع فروع الشركة">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Thank You Modal -->
+    <div class="thank-you-modal" id="thankYouModal">
+        <div class="thank-you-container">
+            <button class="close-modal" id="closeModal" aria-label="إغلاق النافذة">&times;</button>
+            <div class="thank-you-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="thank-you-title">تم استلام رسالتك بنجاح!</h2>
+            <p class="thank-you-message">سنقوم بالرد عليك خلال 24 ساعة. للاستفسارات العاجلة، يرجى التواصل عبر واتساب.</p>
+            <a href="https://wa.me/message/FIW5CFX2HH2HF1" class="whatsapp-btn" target="_blank" aria-label="تواصل معنا عبر واتساب">
+                <i class="fab fa-whatsapp"></i> التواصل عبر واتساب
+            </a>
+            <p style="margin-top: 2rem;">
+                <button id="backToHome" class="whatsapp-btn" style="background: var(--primary-color);">
+                    العودة إلى الصفحة الرئيسية
+                </button>
+            </p>
+        </div>
+    </div>
+    
+    <footer aria-label="تذييل الصفحة">
+        <div class="footer-content">
+            <div class="footer-section" aria-labelledby="footer-about-heading">
+                <h3 id="footer-about-heading">سَبِيلُكَ لِلسَّفَر</h3>
+                <p>شركة متخصصة في خدمات الحج والعمرة وتأشيرات السعودية بأسعار مميزة وجودة عالية.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/vc.tasheer.eg" target="_blank" aria-label="صفحتنا على فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/sabeeluk" target="_blank" aria-label="صفحتنا على تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/sabeeluk" target="_blank" aria-label="صفحتنا على إنستجرام"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/sabeeluk" target="_blank" aria-label="قناتنا على يوتيوب"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section" aria-labelledby="footer-links-heading">
+                <h3 id="footer-links-heading">روابط سريعة</h3>
+                <a href="index.html" aria-label="الانتقال إلى الصفحة الرئيسية">الرئيسية</a>
+                <a href="services.html" aria-label="الانتقال إلى صفحة الخدمات">خدماتنا</a>
+                <a href="payment.html" aria-label="الانتقال إلى صفحة طرق الدفع">طرق الدفع</a>
+                <a href="index.html#testimonials" aria-label="الانتقال إلى قسم آراء العملاء">آراء العملاء</a>
+                <a href="contact.html" aria-label="الانتقال إلى صفحة اتصل بنا">اتصل بنا</a>
+                <a href="privacy.html" aria-label="الانتقال إلى صفحة سياسة الخصوصية">سياسة الخصوصية</a>
+            </div>
+            
+            <div class="footer-section" aria-labelledby="footer-services-heading">
+                <h3 id="footer-services-heading">خدماتنا</h3>
+                <a href="services.html#hajj" aria-label="خدمات الحج والعمرة">الحج والعمرة</a>
+                <a href="services.html#visa" aria-label="خدمات تأشيرات السعودية">تأشيرات السعودية</a>
+                <a href="services.html#tourism" aria-label="خدمات سياحية أخرى">خدمات سياحية أخرى</a>
+            </div>
+            
+            <div class="footer-section" aria-labelledby="footer-newsletter-heading">
+                <h3 id="footer-newsletter-heading">النشرة البريدية</h3>
+                <p>اشترك ليصلك كل جديد عن عروضنا وخدماتنا</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="بريدك الإلكتروني" required>
+                    <button type="submit" class="submit-btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">اشتراك</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة &copy; <span id="year"></span> سَبِيلُكَ لِلسَّفَر - SABEELUK LILSSAFAR</p>
+        </div>
+    </footer>
+    
+    <button class="back-to-top" id="backToTop" aria-label="العودة إلى أعلى الصفحة">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <div class="whatsapp-float">
+        <a href="https://wa.me/message/FIW5CFX2HH2HF1" target="_blank" aria-label="تواصل معنا عبر واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Update copyright year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Progress Bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+        
+        // Form submission with FormSubmit
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const errorDiv = document.getElementById('formError');
+            const successDiv = document.getElementById('formSuccess');
+            const originalBtnText = submitBtn.textContent;
+            
+            try {
+                // Show loading state
+                submitBtn.textContent = 'جاري الإرسال...';
+                submitBtn.disabled = true;
+                errorDiv.style.display = 'none';
+                successDiv.style.display = 'none';
+                
+                // Validate required fields
+                const requiredFields = form.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = 'var(--error-color)';
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = '#ddd';
+                    }
+                });
+                
+                if (!isValid) {
+                    throw new Error('الرجاء ملء جميع الحقول المطلوبة');
+                }
+                
+                // Validate email format
+                const email = form.querySelector('[type="email"]');
+                if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+                    email.style.borderColor = 'var(--error-color)';
+                    throw new Error('الرجاء إدخال بريد إلكتروني صحيح');
+                }
+                
+                // Validate phone number
+                const phone = form.querySelector('[type="tel"]');
+                if (phone && !/^[\d\s\+\-]{8,}$/.test(phone.value)) {
+                    phone.style.borderColor = 'var(--error-color)';
+                    throw new Error('الرجاء إدخال رقم هاتف صحيح');
+                }
+                
+                // Create FormData object
+                const formData = new FormData(form);
+                
+                // Show success message and modal instead of redirecting
+                successDiv.textContent = 'تم إرسال رسالتك بنجاح! سنقوم بالرد عليك في أقرب وقت ممكن.';
+                successDiv.style.display = 'block';
+                document.getElementById('thankYouModal').classList.add('active');
+                form.reset();
+                
+                // Submit form data using fetch as fallback
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                } catch (error) {
+                    console.error('Error submitting form:', error);
+                }
+                
+            } catch (error) {
+                errorDiv.textContent = error.message || 'حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى.';
+                errorDiv.style.display = 'block';
+                errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                console.error('Error:', error);
+            } finally {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Thank You Modal functionality
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('thankYouModal').classList.remove('active');
+        });
+        
+        document.getElementById('backToHome').addEventListener('click', function() {
+            document.getElementById('thankYouModal').classList.remove('active');
+            window.location.href = 'index.html';
+        });
+        
+        // Close modal when clicking outside
+        document.getElementById('thankYouModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+            }
+        });
+        
+        // Close promo banner
+        document.querySelector('.close-promo').addEventListener('click', function() {
+            document.querySelector('.promo-banner').style.display = 'none';
+            localStorage.setItem('promoClosed', 'true');
+        });
+        
+        // Check if promo was closed
+        if (localStorage.getItem('promoClosed')) {
+            document.querySelector('.promo-banner').style.display = 'none';
+        }
+        
+        // Load non-critical resources
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load Font Awesome
+            const loadFontAwesome = document.createElement('link');
+            loadFontAwesome.rel = 'stylesheet';
+            loadFontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css';
+            document.head.appendChild(loadFontAwesome);
+            
+            // Lazy load images
+            const lazyImages = [].slice.call(document.querySelectorAll("img[data-src]"));
+            
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<IfModule mod_rewrite.c>
+    # تمكين محرك إعادة الكتابة
+    RewriteEngine On
+    
+    # تعيين قاعدة إعادة الكتابة الأساسية
+    # رفض جميع طلبات HTTP التي ليست POST أو OPTIONS مع رد 405 (Method Not Allowed)
+    RewriteCond %{REQUEST_METHOD} !^(POST|OPTIONS)$
+    RewriteRule ^ - [R=405,L]
+    
+    # إضافة تحسينات إضافية للأمان والأداء:
+    
+    # 1. منع الوصول إلى الملفات المخفية (تبدأ بنقطة)
+    RewriteRule (^|/)\.(?!well-known) - [F]
+    
+    # 2. منع الوصول إلى بعض الملفات الحساسة
+    <FilesMatch "(\.(env|log|htaccess|htpasswd)|~)$">
+        Require all denied
+    </FilesMatch>
+    
+    # 3. إعدادات التخزين المؤقت للتحسين الأداء
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresByType image/jpg "access plus 1 year"
+        ExpiresByType image/jpeg "access plus 1 year"
+        ExpiresByType image/gif "access plus 1 year"
+        ExpiresByType image/png "access plus 1 year"
+        ExpiresByType text/css "access plus 1 month"
+        ExpiresByType application/pdf "access plus 1 month"
+        ExpiresByType text/x-javascript "access plus 1 month"
+        ExpiresByType application/x-shockwave-flash "access plus 1 month"
+        ExpiresByType image/x-icon "access plus 1 year"
+        ExpiresDefault "access plus 2 days"
+    </IfModule>
+    
+    # 4. ضغط الملفات لتحسين الأداء
+    <IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/plain
+        AddOutputFilterByType DEFLATE text/html
+        AddOutputFilterByType DEFLATE text/xml
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE application/xml
+        AddOutputFilterByType DEFLATE application/xhtml+xml
+        AddOutputFilterByType DEFLATE application/rss+xml
+        AddOutputFilterByType DEFLATE application/javascript
+        AddOutputFilterByType DEFLATE application/x-javascript
+    </IfModule>
+</IfModule>
+
+# إعدادات أمان إضافية
+<IfModule mod_headers.c>
+    # حماية من XSS
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # منع عرض المحتوى في إطارات (Clickjacking protection)
+    Header always append X-Frame-Options SAMEORIGIN
+    
+    # منع MIME sniffing
+    Header set X-Content-Type-Options nosniff
+    
+    # سياسة أمان المحتوى (CSP) - يمكن تخصيصها حسب احتياجاتك
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+</IfModule>
+
+# منع سرد محتويات الدليل
+Options -Indexes
+
+# تعيين صفحة الخطأ المخصصة
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+ErrorDocument 500 /500.html
