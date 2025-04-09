@@ -43,6 +43,8 @@
             --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
             --border-radius: 8px;
             --transition: all 0.3s ease;
+            --error-color: #d32f2f;
+            --success-color: #388e3c;
         }
         
         * {
@@ -57,6 +59,8 @@
             line-height: 1.8;
             background-color: var(--secondary-color);
             font-weight: 700;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -72,6 +76,25 @@
         img {
             max-width: 100%;
             height: auto;
+            display: block;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background: #f1f1f1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background: var(--accent-color);
+            width: 0%;
+            transition: width 0.1s;
         }
 
         /* Header Styles */
@@ -82,6 +105,7 @@
             text-align: center;
             position: relative;
             box-shadow: var(--shadow-md);
+            z-index: 100;
             border-bottom: 4px solid var(--accent-color);
         }
         
@@ -176,6 +200,13 @@
             margin-bottom: 2rem;
             box-shadow: var(--shadow-md);
             border: 3px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
         
         .hero h2 {
@@ -226,6 +257,18 @@
             box-shadow: var(--shadow-sm);
             border-top: 5px solid var(--primary-color);
             transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background-color: var(--accent-color);
         }
         
         .service-box:hover {
@@ -260,6 +303,7 @@
             margin-left: 1rem;
             color: var(--primary-color);
             font-size: 1.3rem;
+            min-width: 25px;
         }
         
         /* WhatsApp Button */
@@ -276,12 +320,15 @@
             margin: 1.5rem auto 0;
             box-shadow: 0 4px 15px rgba(18, 140, 126, 0.4);
             transition: var(--transition);
+            border: 2px solid transparent;
+            min-width: 200px;
         }
         
         .whatsapp-btn:hover {
             background: var(--whatsapp-dark);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(7, 94, 84, 0.5);
+            border-color: var(--white);
         }
         
         .whatsapp-btn i {
@@ -289,6 +336,72 @@
             font-size: 1.6rem;
         }
 
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--whatsapp-color), var(--whatsapp-dark));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(18, 140, 126, 0.4);
+            z-index: 99;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Why Choose Us Section */
+        .why-choose-us {
+            background: rgba(0, 100, 148, 0.05);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
         /* Footer */
         footer {
             background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
@@ -312,6 +425,18 @@
             font-size: 1.4rem;
             margin-bottom: 1.2rem;
             color: var(--accent-color);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
         }
         
         .footer-section p, .footer-section a {
@@ -358,6 +483,42 @@
             color: rgba(255, 255, 255, 0.95);
         }
         
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 99;
+            box-shadow: var(--shadow-md);
+            border: none;
+            transition: var(--transition);
+            border: 3px solid var(--primary-color);
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .services-grid {
@@ -372,10 +533,19 @@
             .social-icons {
                 justify-content: center;
             }
+            
+            .footer-section h3::after {
+                right: 50%;
+                transform: translateX(50%);
+            }
         }
     </style>
 </head>
 <body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
     <header>
         <div class="header-content">
             <div class="logo-container">
@@ -398,122 +568,230 @@
     
     <main>
         <section class="hero">
-            <h2>خدماتنا المتميزة</h2>
-            <p>نقدم مجموعة واسعة من خدمات السفر والسياحة الدينية باحترافية وجودة عالية لتجربة سفر لا تنسى</p>
-            <a href="contact.html" class="whatsapp-btn">
-                <i class="fas fa-phone-alt"></i> احجز خدمتك الآن
-            </a>
+            <div class="hero-content">
+                <h2>خدماتنا المتميزة</h2>
+                <p>نقدم مجموعة واسعة من خدمات السفر والسياحة الدينية باحترافية وجودة عالية لتجربة سفر لا تنسى</p>
+                <a href="contact.html" class="whatsapp-btn">
+                    <i class="fas fa-phone-alt"></i> احجز خدمتك الآن
+                </a>
+            </div>
         </section>
         
-        <section>
-            <h2 class="section-title">خدماتنا الشاملة</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">نقدم حزمة متكاملة من خدمات السفر والسياحة الدينية لتلبية جميع احتياجاتك</p>
+        <section id="hajj">
+            <h2 class="section-title">خدمات الحج والعمرة</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">برامج متكاملة تشمل كل ما تحتاجه لأداء مناسك الحج والعمرة بكل سهولة ويسر</p>
             
             <div class="services-grid">
                 <div class="service-box">
-                    <h2>خدمات الحج والعمرة</h2>
+                    <h2>برامج الحج</h2>
                     <ul class="service-list">
-                        <li><i class="fas fa-kaaba"></i> برامج حج وعمرة متكاملة</li>
-                        <li><i class="fas fa-hotel"></i> حجوزات فنادق بالقرب من الحرمين</li>
-                        <li><i class="fas fa-bus"></i> خدمات نقل متميزة</li>
+                        <li><i class="fas fa-kaaba"></i> حج متميز مع أفضل الفنادق</li>
+                        <li><i class="fas fa-hotel"></i> حج اقتصادي بأسعار تنافسية</li>
+                        <li><i class="fas fa-star"></i> حج VIP بخدمات فاخرة</li>
+                        <li><i class="fas fa-bus"></i> نقل مريح بين المشاعر</li>
                         <li><i class="fas fa-utensils"></i> وجبات طعام متنوعة</li>
                         <li><i class="fas fa-user-tie"></i> مرشدون متخصصون</li>
-                        <li><i class="fas fa-map-marked-alt"></i> رحلات سياحية داخل مكة والمدينة</li>
                     </ul>
                 </div>
 
                 <div class="service-box">
-                    <h2>تأشيرات السعودية</h2>
+                    <h2>برامج العمرة</h2>
                     <ul class="service-list">
-                        <li><i class="fas fa-calendar-check"></i> حجز مواعيد التأشيرات</li>
-                        <li><i class="fas fa-file-alt"></i> طلبات إنجاز</li>
-                        <li><i class="fas fa-users"></i> تأشيرات زيارة عائلية</li>
-                        <li><i class="fas fa-briefcase"></i> تأشيرات أعمال</li>
-                        <li><i class="fas fa-umbrella-beach"></i> تأشيرات سياحية</li>
-                        <li><i class="fas fa-user-plus"></i> تأشيرات استقدام</li>
-                        <li><i class="fas fa-qrcode"></i> تأشيرات عمرة (باركود)</li>
+                        <li><i class="fas fa-moon"></i> عمرة رمضان المبارك</li>
+                        <li><i class="fas fa-sun"></i> عمرة أيام السنة</li>
+                        <li><i class="fas fa-gem"></i> عمرة متميزة</li>
+                        <li><i class="fas fa-hotel"></i> فنادق 5 نجوم قريبة من الحرم</li>
+                        <li><i class="fas fa-plane"></i> تذاكر طيران بأسعار خاصة</li>
+                        <li><i class="fas fa-map-marked-alt"></i> رحلات سياحية داخل مكة</li>
                     </ul>
                 </div>
                 
                 <div class="service-box">
-                    <h2>تأشيرات الدول العربية</h2>
+                    <h2>خدمات إضافية</h2>
                     <ul class="service-list">
-                        <li><i class="fas fa-flag"></i> تأشيرة الإمارات</li>
-                        <li><i class="fas fa-flag"></i> تأشيرة قطر</li>
-                        <li><i class="fas fa-flag"></i> تأشيرة البحرين</li>
-                        <li><i class="fas fa-flag"></i> تأشيرة عمان</li>
-                        <li><i class="fas fa-flag"></i> تأشيرة المغرب</li>
-                        <li><i class="fas fa-flag"></i> تأشيرة تونس</li>
-                        <li><i class="fas fa-flag"></i> تأشيرة الجزائر</li>
-                        <li><i class="fas fa-globe-africa"></i> تأشيرات دول أخرى</li>
-                    </ul>
-                </div>
-
-                <div class="service-box">
-                    <h2>خدمات السفر العامة</h2>
-                    <ul class="service-list">
-                        <li><i class="fas fa-plane"></i> حجز تذاكر الطيران</li>
-                        <li><i class="fas fa-hotel"></i> حجوزات الفنادق العالمية</li>
-                        <li><i class="fas fa-car"></i> تأجير سيارات</li>
-                        <li><i class="fas fa-medal"></i> تأمين سفر</li>
-                        <li><i class="fas fa-graduation-cap"></i> تأشيرات طلابية</li>
-                        <li><i class="fas fa-hand-holding-medical"></i> تأشيرات علاج</li>
-                    </ul>
-                </div>
-
-                <div class="service-box">
-                    <h2>خدمات وثائق السفر</h2>
-                    <ul class="service-list">
-                        <li><i class="fas fa-passport"></i> تجديد الجوازات</li>
-                        <li><i class="fas fa-file-signature"></i> تصاريح سفر</li>
-                        <li><i class="fas fa-syringe"></i> شهادات تطعيم</li>
-                        <li><i class="fas fa-id-card"></i> تغيير بيانات الجواز</li>
-                        <li><i class="fas fa-file-medical"></i> شهادات صحية</li>
-                        <li><i class="fas fa-file-alt"></i> توثيق المؤهلات</li>
-                    </ul>
-                </div>
-
-                <div class="service-box">
-                    <h2>خدمات التوثيق القانوني</h2>
-                    <ul class="service-list">
-                        <li><i class="fas fa-birthday-cake"></i> شهادات ميلاد</li>
-                        <li><i class="fas fa-file-invoice"></i> توثيق عقود زواج</li>
-                        <li><i class="fas fa-file-contract"></i> توثيق عقود عمل</li>
-                        <li><i class="fas fa-file-certificate"></i> توثيق شهادات</li>
-                        <li><i class="fas fa-stamp"></i> توثيق توقيعات</li>
-                        <li><i class="fas fa-file-archive"></i> توثيق وثائق شخصية</li>
+                        <li><i class="fas fa-suitcase"></i> تأمين السفر</li>
+                        <li><i class="fas fa-medal"></i> شهادات مشاركة</li>
+                        <li><i class="fas fa-book"></i> كتيبات إرشادية</li>
+                        <li><i class="fas fa-headset"></i> دعم فني 24/7</li>
+                        <li><i class="fas fa-quran"></i> نسخ من المصحف الشريف</li>
+                        <li><i class="fas fa-gift"></i> هدايا تذكارية</li>
                     </ul>
                 </div>
             </div>
+        </section>
+        
+        <section id="visa">
+            <h2 class="section-title">تأشيرات السعودية</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">خدمات متكاملة لاستخراج جميع أنواع تأشيرات المملكة العربية السعودية</p>
             
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="contact.html" class="whatsapp-btn" style="background: var(--primary-color); margin-right: 1rem;">
+            <div class="services-grid">
+                <div class="service-box">
+                    <h2>تأشيرات الزيارة</h2>
+                    <ul class="service-list">
+                        <li><i class="fas fa-calendar-check"></i> حجز مواعيد التأشيرات</li>
+                        <li><i class="fas fa-users"></i> تأشيرات زيارة عائلية</li>
+                        <li><i class="fas fa-user-friends"></i> تأشيرات زيارة أصدقاء</li>
+                        <li><i class="fas fa-file-alt"></i> طلبات إنجاز</li>
+                        <li><i class="fas fa-qrcode"></i> تأشيرات عمرة (باركود)</li>
+                        <li><i class="fas fa-sync-alt"></i> تجديد التأشيرات</li>
+                    </ul>
+                </div>
+
+                <div class="service-box">
+                    <h2>تأشيرات العمل</h2>
+                    <ul class="service-list">
+                        <li><i class="fas fa-briefcase"></i> تأشيرات عمل جديدة</li>
+                        <li><i class="fas fa-exchange-alt"></i> نقل كفالة</li>
+                        <li><i class="fas fa-user-plus"></i> تأشيرات استقدام</li>
+                        <li><i class="fas fa-id-card"></i> تصاريح إقامة</li>
+                        <li><i class="fas fa-passport"></i> تجديد الجوازات</li>
+                        <li><i class="fas fa-file-contract"></i> توثيق عقود العمل</li>
+                    </ul>
+                </div>
+                
+                <div class="service-box">
+                    <h2>تأشيرات أخرى</h2>
+                    <ul class="service-list">
+                        <li><i class="fas fa-umbrella-beach"></i> تأشيرات سياحية</li>
+                        <li><i class="fas fa-graduation-cap"></i> تأشيرات طلابية</li>
+                        <li><i class="fas fa-hand-holding-medical"></i> تأشيرات علاج</li>
+                        <li><i class="fas fa-plane-departure"></i> تأشيرات ترانزيت</li>
+                        <li><i class="fas fa-business-time"></i> تأشيرات رجال أعمال</li>
+                        <li><i class="fas fa-globe"></i> تأشيرات دبلوماسية</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="tourism">
+            <h2 class="section-title">خدمات السفر والسياحة</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">خدمات متكاملة لرحلة سفر مريحة وممتعة</p>
+            
+            <div class="services-grid">
+                <div class="service-box">
+                    <h2>حجز الطيران</h2>
+                    <ul class="service-list">
+                        <li><i class="fas fa-plane"></i> تذاكر طيران بأسعار خاصة</li>
+                        <li><i class="fas fa-suitcase-rolling"></i> حجز الأمتعة</li>
+                        <li><i class="fas fa-chair"></i> اختيار المقاعد</li>
+                        <li><i class="fas fa-utensils"></i> وجبات خاصة على الطائرة</li>
+                        <li><i class="fas fa-wheelchair"></i> خدمات ذوي الاحتياجات</li>
+                        <li><i class="fas fa-baby"></i> خدمات الرضع والأطفال</li>
+                    </ul>
+                </div>
+
+                <div class="service-box">
+                    <h2>حجز الفنادق</h2>
+                    <ul class="service-list">
+                        <li><i class="fas fa-hotel"></i> فنادق 5 نجوم</li>
+                        <li><i class="fas fa-home"></i> شقق فندقية</li>
+                        <li><i class="fas fa-building"></i> منتجعات وشاليهات</li>
+                        <li><i class="fas fa-map-marker-alt"></i> مواقع مميزة</li>
+                        <li><i class="fas fa-concierge-bell"></i> خدمات الغرف</li>
+                        <li><i class="fas fa-swimming-pool"></i> مرافق ترفيهية</li>
+                    </ul>
+                </div>
+                
+                <div class="service-box">
+                    <h2>خدمات أخرى</h2>
+                    <ul class="service-list">
+                        <li><i class="fas fa-car"></i> تأجير سيارات</li>
+                        <li><i class="fas fa-bus"></i> حجز المواصلات</li>
+                        <li><i class="fas fa-medal"></i> تأمين سفر</li>
+                        <li><i class="fas fa-map-marked-alt"></i> جولات سياحية</li>
+                        <li><i class="fas fa-theater-masks"></i> تذاكر فعاليات</li>
+                        <li><i class="fas fa-language"></i> مرشدين سياحيين</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="documents">
+            <h2 class="section-title">خدمات الوثائق والسفر</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">خدمات متكاملة لاستخراج وتجديد وثائق السفر</p>
+            
+            <div class="services-grid">
+                <div class="service-box">
+                    <h2>وثائق السفر</h2>
+                    <ul class="service-list">
+                        <li><i class="fas fa-passport"></i> تجديد الجوازات</li>
+                        <li><i class="fas fa-file-signature"></i> تصاريح سفر</li>
+                        <li><i class="fas fa-id-card"></i> تغيير بيانات الجواز</li>
+                        <li><i class="fas fa-file-invoice"></i> توثيق عقود زواج</li>
+                        <li><i class="fas fa-birthday-cake"></i> شهادات ميلاد</li>
+                        <li><i class="fas fa-file-archive"></i> توثيق وثائق شخصية</li>
+                    </ul>
+                </div>
+
+                <div class="service-box">
+                    <h2>المستندات الصحية</h2>
+                    <ul class="service-list">
+                        <li><i class="fas fa-file-medical"></i> شهادات صحية</li>
+                        <li><i class="fas fa-syringe"></i> شهادات تطعيم</li>
+                        <li><i class="fas fa-procedures"></i> تقارير طبية</li>
+                        <li><i class="fas fa-prescription"></i> وصفات طبية</li>
+                        <li><i class="fas fa-ambulance"></i> تأمين صحي للسفر</li>
+                        <li><i class="fas fa-heartbeat"></i> فحوصات ما قبل السفر</li>
+                    </ul>
+                </div>
+                
+                <div class="service-box">
+                    <h2>المستندات التعليمية</h2>
+                    <ul class="service-list">
+                        <li><i class="fas fa-file-certificate"></i> توثيق شهادات</li>
+                        <li><i class="fas fa-graduation-cap"></i> معادلة الشهادات</li>
+                        <li><i class="fas fa-book-open"></i> سجلات أكاديمية</li>
+                        <li><i class="fas fa-stamp"></i> توثيق توقيعات</li>
+                        <li><i class="fas fa-file-alt"></i> خطابات توصية</li>
+                        <li><i class="fas fa-language"></i> ترجمة مستندات</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="why-choose-us">
+            <h2 class="section-title">لماذا تختار خدماتنا؟</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>جودة عالية</h3>
+                    <p>نقدم خدمات بمعايير جودة عالمية لضمان رضاك التام</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>أسعار تنافسية</h3>
+                    <p>أفضل العروض والأسعار في السوق مع خصومات حصرية</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>دعم فني 24/7</h3>
+                    <p>فريق دعم فني متاح على مدار الساعة لمساعدتك</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>ضمان الخدمة</h3>
+                    <p>نضمن لك الحصول على الخدمة كما وعدناك</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="contact.html" class="whatsapp-btn" style="background: var(--primary-color);">
                     <i class="fas fa-envelope"></i> اطلب استشارة مجانية
                 </a>
                 <a href="https://wa.me/message/FIW5CFX2HH2HF1" class="whatsapp-btn" target="_blank">
                     <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
                 </a>
-            </div>
-        </section>
-        
-        <section style="background: rgba(0, 100, 148, 0.05); padding: 3rem; border-radius: var(--border-radius); margin: 3rem 0; text-align: center;">
-            <h2 class="section-title">لماذا تختار خدماتنا؟</h2>
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="service-box" style="text-align: center;">
-                    <i class="fas fa-award" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
-                    <h3>جودة عالية</h3>
-                    <p>نقدم خدمات بمعايير جودة عالمية لضمان رضاك التام</p>
-                </div>
-                <div class="service-box" style="text-align: center;">
-                    <i class="fas fa-hand-holding-usd" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
-                    <h3>أسعار تنافسية</h3>
-                    <p>أفضل العروض والأسعار في السوق مع خصومات حصرية</p>
-                </div>
-                <div class="service-box" style="text-align: center;">
-                    <i class="fas fa-headset" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
-                    <h3>دعم فني 24/7</h3>
-                    <p>فريق دعم فني متاح على مدار الساعة لمساعدتك</p>
-                </div>
             </div>
         </section>
     </main>
@@ -551,9 +829,57 @@
         </div>
     </footer>
 
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <a href="https://wa.me/message/FIW5CFX2HH2HF1" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script>
         // Update copyright year automatically
         document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Progress Bar
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
