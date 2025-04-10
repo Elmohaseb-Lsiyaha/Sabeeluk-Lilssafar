@@ -564,6 +564,75 @@
             color: var(--accent-color);
             border-color: var(--accent-color);
         }
+
+        /* Thank You Modal Styles */
+        .thank-you-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .thank-you-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .thank-you-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            border-top: 5px solid var(--accent-color);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .thank-you-modal.active .thank-you-container {
+            transform: translateY(0);
+        }
+        
+        .thank-you-icon {
+            font-size: 5rem;
+            color: var(--success-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .thank-you-title {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .thank-you-message {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
         
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -674,8 +743,6 @@
             <div class="contact-container">
                 <div class="contact-form">
                     <form id="contactForm" action="https://formsubmit.co/sabeeluk.lilssafar@gmail.com" method="POST">
-                        <input type="hidden" name="_next" value="https://sabeeluk-lilssafar.github.io/sabeeluk.lilssafar/thank-you.html">
-                        <input type="hidden" name="_next" value="https://sabeeluk-lilssafar.netlify.app/thank-you.html">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_subject" value="طلب جديد من موقع سَبِيلُكَ لِلسَّفَر">
@@ -791,6 +858,21 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Thank You Modal -->
+    <div class="thank-you-modal" id="thankYouModal">
+        <div class="thank-you-container">
+            <button class="close-modal" id="closeModal">×</button>
+            <div class="thank-you-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="thank-you-title">تم استلام رسالتك بنجاح!</h2>
+            <p class="thank-you-message">سنقوم بالرد عليك خلال 24 ساعة. للاستفسارات العاجلة، يرجى التواصل عبر واتساب.</p>
+            <a href="https://wa.me/message/FIW5CFX2HH2HF1" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> التواصل عبر واتساب
+            </a>
+        </div>
+    </div>
+
     <script>
         // Update copyright year automatically
         document.getElementById('year').textContent = new Date().getFullYear();
@@ -849,6 +931,35 @@
             if (!serviceInput.value) {
                 e.preventDefault();
                 alert('الرجاء اختيار الخدمة المطلوبة قبل إرسال النموذج');
+                return;
+            }
+
+            e.preventDefault();
+            
+            // Here you would normally send the form data to your server
+            // For demonstration, we'll just show the thank you modal
+            
+            // Show thank you modal
+            const thankYouModal = document.getElementById('thankYouModal');
+            thankYouModal.classList.add('active');
+            
+            // Reset form
+            this.reset();
+            
+            // Remove selected class from all service options
+            serviceOptions.forEach(opt => opt.classList.remove('selected'));
+            serviceInput.value = '';
+        });
+
+        // Close modal
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('thankYouModal').classList.remove('active');
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('thankYouModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
             }
         });
     </script>
