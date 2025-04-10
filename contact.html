@@ -852,63 +852,123 @@
             }
         });
     </script>
-<!-- Thank You Iframe Modal -->
-<div id="thankYouModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); z-index: 1000;">
-    <div style="position: relative; width: 80%; height: 80%; margin: 5% auto; background: white; border-radius: 10px; overflow: hidden;">
-        <button onclick="closeThankYouModal()" style="position: absolute; top: 10px; left: 10px; background: var(--error-color); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; z-index: 1001; cursor: pointer;">×</button>
-        <iframe id="thankYouFrame" src="" style="width: 100%; height: 100%; border: none;"></iframe>
-    </div>
-</div>
-
-<script>
-    function showThankYouModal() {
-        const modal = document.getElementById('thankYouModal');
-        const frame = document.getElementById('thankYouFrame');
-        frame.src = 'thank-you.html';
-        modal.style.display = 'block';
-    }
-    
-    function closeThankYouModal() {
-        const modal = document.getElementById('thankYouModal');
-        const frame = document.getElementById('thankYouFrame');
-        frame.src = '';
-        modal.style.display = 'none';
-    }
-    
-    // تعديل حدث الإرسال (نفس الكود السابق)
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        if (!document.getElementById('selectedService').value) {
-            e.preventDefault();
-            alert('الرجاء اختيار الخدمة المطلوبة قبل إرسال النموذج');
-            return;
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شكرًا لتواصلكم - سَبِيلُكَ لِلسَّفَر</title>
+    <style>
+        :root {
+            --primary-color: #006494;
+            --accent-color: #FF9100;
+            --white: #FFFFFF;
+            --success-color: #388e3c;
         }
-        
-        e.preventDefault();
-        const form = e.target;
-        const formData = new FormData(form);
-        
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                showThankYouModal();
-                form.reset();
-                document.querySelectorAll('.service-option').forEach(opt => opt.classList.remove('selected'));
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-            alert('حدث خطأ أثناء إرسال النموذج، يرجى المحاولة مرة أخرى.');
+        body {
+            font-family: 'Tajawal', sans-serif;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .success-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            border-top: 5px solid var(--accent-color);
+        }
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, #25D366, #128C7E);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(18, 140, 126, 0.4);
+        }
+        .whatsapp-btn:hover {
+            background: white;
+            color: #25D366;
+            border-color: #25D366;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(7, 94, 84, 0.5);
+        }
+        .fa-whatsapp {
+            margin-left: 0.8rem;
+            font-size: 1.4rem;
+        }
+        .logo-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            object-fit: contain;
+            background-color: white;
+            padding: 5px;
+            margin-bottom: 1.5rem;
+        }
+        .check-icon {
+            color: var(--success-color);
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="success-container">
+        <img src="images/logo.gif" alt="شعار سَبِيلُكَ لِلسَّفَر" class="logo-img" onerror="this.src='https://via.placeholder.com/100x100?text=شعار+الشركة';this.onerror=null;">
+        <div class="check-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h1>تم استلام رسالتك بنجاح!</h1>
+        <p>سنقوم بالرد عليك خلال 24 ساعة. للاستفسارات العاجلة، يرجى التواصل عبر واتساب.</p>
+        <a href="https://wa.me/message/FIW5CFX2HH2HF1" class="whatsapp-btn" target="_blank">
+            التواصل عبر واتساب <i class="fab fa-whatsapp"></i>
+        </a>
+        <p style="margin-top: 2rem;">
+            <a href="index.html" style="color: var(--primary-color); text-decoration: underline; font-weight: bold;">العودة إلى الصفحة الرئيسية</a>
+        </p>
+    </div>
+
+    <script>
+        // تحسين تجربة المستخدم بإضافة تأثير بسيط عند التحميل
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.success-container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(20px)';
+            container.style.transition = 'all 0.5s ease';
+            
+            setTimeout(() => {
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
         });
-    });
-</script>
+    </script>
 </body>
 </html>
 
